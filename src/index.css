@@ -1,0 +1,120 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --color-mousse: #2E4036;
+    --color-argile: #CC5833;
+    --color-creme: #F2F0E9;
+    --color-charbon: #1A1A1A;
+  }
+
+  html {
+    scroll-behavior: smooth;
+    background-color: #F2F0E9;
+    color: #1A1A1A;
+  }
+
+  /* Custom discreet scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #E8E5DA;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #2E4036;
+    border-radius: 9999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: #CC5833;
+  }
+}
+
+@layer components {
+  /* Magnetic Button standard requirement */
+  .btn-magnetic {
+    @apply relative inline-flex items-center justify-center overflow-hidden rounded-full font-medium transition-all duration-300;
+    transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+  .btn-magnetic:hover {
+    transform: scale(1.03);
+  }
+  .btn-magnetic:active {
+    transform: scale(0.98);
+  }
+  
+  /* Sliding fill layer for magnetic buttons */
+  .btn-magnetic .btn-slide {
+    @apply absolute inset-0 -translate-x-full transition-transform duration-500 ease-out;
+  }
+  .btn-magnetic:hover .btn-slide {
+    @apply translate-x-0;
+  }
+
+  /* Link lift effect */
+  .link-lift {
+    @apply transition-transform duration-200 inline-block;
+  }
+  .link-lift:hover {
+    transform: translateY(-1.5px);
+  }
+
+  /* Organic glass pill for floating navbar */
+  .glass-pill {
+    background: rgba(242, 240, 233, 0.75);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(46, 64, 54, 0.12);
+  }
+  .glass-pill-dark {
+    background: rgba(26, 26, 26, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  /* Pulse radar effect */
+  @keyframes radarPulse {
+    0% {
+      transform: scale(0.9);
+      opacity: 0.8;
+    }
+    50% {
+      transform: scale(1.4);
+      opacity: 0.2;
+    }
+    100% {
+      transform: scale(1.8);
+      opacity: 0;
+    }
+  }
+
+  .animate-radar {
+    animation: radarPulse 2.4s cubic-bezier(0.2, 0.8, 0.4, 1) infinite;
+  }
+
+  /* Laser line scanner animation */
+  @keyframes laserScan {
+    0% {
+      top: 0%;
+      opacity: 0;
+    }
+    10% {
+      opacity: 1;
+    }
+    90% {
+      opacity: 1;
+    }
+    100% {
+      top: 100%;
+      opacity: 0;
+    }
+  }
+
+  .animate-laser {
+    animation: laserScan 3.5s ease-in-out infinite;
+  }
+}
