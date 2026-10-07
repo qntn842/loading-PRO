@@ -21,7 +21,7 @@ export default function Navbar({ onOpenOrderModal }) {
     <header className="fixed top-5 left-0 right-0 z-50 flex justify-center px-4 pointer-events-none transition-all duration-500">
       <nav
         aria-label="Navigation Principale"
-        className={`pointer-events-auto flex items-center justify-between gap-4 md:gap-8 px-4 md:px-7 py-2.5 md:py-3 rounded-full transition-all duration-500 max-w-5xl w-full ${
+        className={`pointer-events-auto flex items-center justify-between gap-4 md:gap-8 px-4 md:px-7 py-3 rounded-full transition-all duration-500 max-w-5xl w-full ${
           isScrolled
             ? "glass-pill shadow-elevated border border-mousse/15 text-charbon backdrop-blur-2xl"
             : "bg-charbon/75 border border-creme/20 text-creme backdrop-blur-xl shadow-2xl"
@@ -33,21 +33,21 @@ export default function Navbar({ onOpenOrderModal }) {
           className="flex items-center gap-2.5 group"
           id="nav-logo"
         >
-          <div className="w-8 h-8 rounded-full bg-mousse flex items-center justify-center text-creme border border-creme/20 group-hover:bg-argile transition-colors duration-300">
+          <div className="w-8 h-8 rounded-full bg-mousse flex items-center justify-center text-creme border border-creme/20 group-hover:bg-argile transition-colors duration-300 shrink-0">
             <Compass className="w-4 h-4 transition-transform duration-500 group-hover:rotate-45" />
           </div>
-          <div className="flex flex-col">
-            <span className="font-display font-bold text-sm md:text-base tracking-tight uppercase leading-none">
+          <div className="flex flex-col justify-center">
+            <span className="font-display font-bold text-sm md:text-base tracking-tight uppercase leading-tight">
               Livr<span className="text-argile">Express</span>
             </span>
-            <span className="font-mono text-[9px] tracking-widest opacity-75 uppercase mt-0.5">
+            <span className="font-mono text-[9px] tracking-widest opacity-60 uppercase leading-tight">
               Dakar • Livraison &lt; 2h
             </span>
           </div>
         </a>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden md:flex items-center gap-8 text-xs font-semibold tracking-wide uppercase">
+        <div className="hidden md:flex items-center gap-6 text-xs font-semibold tracking-wide uppercase">
           <a
             href="#features"
             className="link-lift hover:text-argile transition-colors"
@@ -75,7 +75,7 @@ export default function Navbar({ onOpenOrderModal }) {
         </div>
 
         {/* Live operational badge + CTA */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
           <div className="hidden lg:flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-mousse/10 border border-mousse/20 text-[10px] font-mono">
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
             <span className="text-mousse dark:text-creme">VDN FLUIDE</span>
