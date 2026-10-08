@@ -28,19 +28,6 @@ export default function Hero({ onOpenOrderModal }) {
 
       {/* Main Content Block (Centered vertically with my-auto for perfect framing on PC) */}
       <div className="relative z-10 max-w-5xl my-auto py-2 sm:py-4">
-        {/* Floating Reassurance Pill in Hero */}
-        <div className="hero-item mb-4 sm:mb-6 flex flex-wrap items-center gap-3">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-creme/10 border border-creme/20 backdrop-blur-md text-creme text-xs font-mono tracking-wider">
-            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-ping" />
-            <span className="font-semibold text-white">COURSIERS DISPONIBLES</span>
-            <span className="text-creme/40">•</span>
-            <span className="text-creme/90">PARTOUT À DAKAR</span>
-          </div>
-          <div className="hidden sm:inline-flex items-center gap-2 text-creme/80 text-xs font-mono">
-            <Clock className="w-3.5 h-3.5 text-argile" />
-            <span>LIVRAISON EN MOINS DE 2H OU REMBOURSÉ</span>
-          </div>
-        </div>
 
         {/* Hero Typography: Preset A Title Pattern (Crystal Clear & Impactful) */}
         <div className="hero-item flex flex-col mb-4 sm:mb-6">
